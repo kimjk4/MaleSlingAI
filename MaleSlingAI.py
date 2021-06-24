@@ -86,6 +86,7 @@ def main():
                     FormerSmoker0no1yes2current = st.radio("Smoking history",tuple(FormerSmoker0no1yes2current_dict.keys()))
                     Race1white2black3other = st.radio("Race",tuple(Race1white2black3other_dict.keys()))
                     BNC = st.radio("Bladder neck contracture",tuple(feature_dict.keys()))
+                    code_ConcomitantProcedures = st.radio("Plan for concomitant procedures with male sling", tuple(feature_dict.keys()))
                     
                     st.subheader ("Incontinence characteristics")
                     
@@ -100,12 +101,12 @@ def main():
                     
                     feature_list = [AgeatAdVance, Heightatslingsurgerycm, weightatslingsurgerykg, get_value(Diabetes,Diabetes_dict), 
                                     get_value(FormerSmoker0no1yes2current,FormerSmoker0no1yes2current_dict), get_value(Race1white2black3other, Race1white2black3other_dict), 
-                                    get_feature_value(BNC), get_value(Incontinence_Type,Incontinence_Type_dict), get_value(Etiology1Prostatectomy2otherprostatetherapy3radiation4NGBSCI5TUR,Etiology1Prostatectomy2otherprostatetherapy3radiation4NGBSCI5TUR_dict),
+                                    get_feature_value(BNC),geat_feature_value(code_ConcomitantProcedures), get_value(Incontinence_Type,Incontinence_Type_dict), get_value(Etiology1Prostatectomy2otherprostatetherapy3radiation4NGBSCI5TUR,Etiology1Prostatectomy2otherprostatetherapy3radiation4NGBSCI5TUR_dict),
                                     Preop, get_feature_value(Prostatectomy1yes0no), get_feature_value(PelvicRads1yes0no), get_feature_value(Prior_SUI_mgt)]
                    
                     st.write(feature_list)
                     pretty_result = {"Age":AgeatAdVance, "Height":Heightatslingsurgerycm, "Weight":weightatslingsurgerykg, "Diabetes":Diabetes, "Smoking history":FormerSmoker0no1yes2current, "Race":Race1white2black3other,
-                                     "Bladder neck contracture":BNC, "Type of Incontinence":Incontinence_Type, "Etiology of incontinence":Etiology1Prostatectomy2otherprostatetherapy3radiation4NGBSCI5TUR, 
+                                     "Bladder neck contracture":BNC, "Plan for concomitant procedures with male sling":code_ConcomitantProcedures, "Type of Incontinence":Incontinence_Type, "Etiology of incontinence":Etiology1Prostatectomy2otherprostatetherapy3radiation4NGBSCI5TUR, 
                                      "Number of pads per day":Preop, "Prior prostatectomy":Prostatectomy1yes0no, "Prior radiation":PelvicRads1yes0no, "Prior stress urinary incontinence management": Prior_SUI_mgt}
                     st.json(pretty_result)
                     single_sample = np.array(feature_list).reshape(1,-1)
