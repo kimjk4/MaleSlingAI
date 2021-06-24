@@ -130,27 +130,7 @@ def main():
                             st.json(pred_probability_score)
                             
     
-                                
-            else:
-                st.warning("Incorrect Username/Password")
-    
-    elif choice == "SignUp":
-        new_username = st.text_input("User name")
-        new_password = st.text_input("Password", type='password')
-        
-        confirm_password = st.text_input("Confirm Password", type='password')
-        if new_password == confirm_password:
-            st.success("Password Confirmed")
-        else:
-            st.warning("Passwords do not match")
-            
-        if st.button("Submit"):
-            create_usertable()
-            hashed_new_password = generate_hashes(new_password)
-            add_userdata(new_username, hashed_new_password)
-            st.success("You have successfully created a new account!")
-            st.info("Login To Get Started")
-
+                               
 
 
 if __name__ == '__main__':
