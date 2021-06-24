@@ -72,8 +72,8 @@ def main():
         st.subheader("Home")
         st.text ("Prediction of success of AdVance Male Sling")
                 
-                activity = st.selectbox("Activity", submenu)
-                if activity == "Prediction":
+        activity = st.selectbox("Activity", submenu)
+        if activity == "Prediction":
                     st.header("Predictive Analytics")
                     
                     st.subheader ("Patient characteristics")
