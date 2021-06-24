@@ -62,26 +62,15 @@ def load_model(model_file):
 
 def main():
     """Male Sling Success Prediction"""
-    st.title("Success is defined by cure (0 pads per day use), a ≥50% improvement in pad use, patient satisfaction with the surgical outcome and without further procedures")
+    st.title("Male Sling Success Prediction")
     
-    menu = ["Home", "Login", "SignUp"]
-    submenu = ["Prediction", "Metrics"]
+    menu = ["Home"]
+    submenu = ["Prediction"]
     
     choice = st.sidebar.selectbox("Menu", menu)
     if choice == "Home":
         st.subheader("Home")
         st.text ("Prediction of success of AdVance Male Sling")
-        
-    elif choice == "Login":
-        username = st.sidebar.text_input("User name")
-        password = st.sidebar.text_input("Password", type='password')
-        if st.sidebar.checkbox("Login"):
-            create_usertable()
-            hashed_pswd = generate_hashes(password)
-            result = login_user(username, verify_hashes(password,hashed_pswd))
-            #if password == "SickKidsUrology":
-            if result:
-                st.success("Welcome {}".format(username))
                 
                 activity = st.selectbox("Activity", submenu)
                 if activity == "Prediction":
