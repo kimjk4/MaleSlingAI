@@ -38,6 +38,7 @@ Race1white2black3other_dict = {"White":1,"Black":2, "Other":3}
 Incontinence_Type_dict = {"Stress Urinary Incontinence":1, "Mixed Incontinence":2}
 code_ConcomitantProcedures_dict = {"No concomitant procedures planned":0, "Concomitant procedures planned":1}
 Etiology1Prostatectomy2otherprostatetherapy3radiation4NGBSCI5TUR_dict = {"Prostatectomy":1, "Other prostate therapy":2, "Radiation":3, "Neurogenic bladder/Spinal cord injury":4, "Transurethral resecctions":5}
+feature_dict = {"Yes":1, "No":0}
 
 def get_value(val,my_dict):
     for key, value in my_dict.items():
