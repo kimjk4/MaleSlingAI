@@ -101,7 +101,7 @@ def main():
                     
                     feature_list = [AgeatAdVance, Heightatslingsurgerycm, weightatslingsurgerykg, get_value(Diabetes,Diabetes_dict), 
                                     get_value(FormerSmoker0no1yes2current,FormerSmoker0no1yes2current_dict), get_value(Race1white2black3other, Race1white2black3other_dict), 
-                                    get_feature_value(BNC),geat_feature_value(code_ConcomitantProcedures), get_value(Incontinence_Type,Incontinence_Type_dict), get_value(Etiology1Prostatectomy2otherprostatetherapy3radiation4NGBSCI5TUR,Etiology1Prostatectomy2otherprostatetherapy3radiation4NGBSCI5TUR_dict),
+                                    get_feature_value(BNC),get_feature_value(code_ConcomitantProcedures), get_value(Incontinence_Type,Incontinence_Type_dict), get_value(Etiology1Prostatectomy2otherprostatetherapy3radiation4NGBSCI5TUR,Etiology1Prostatectomy2otherprostatetherapy3radiation4NGBSCI5TUR_dict),
                                     Preop, get_feature_value(Prostatectomy1yes0no), get_feature_value(PelvicRads1yes0no), get_feature_value(Prior_SUI_mgt)]
                    
                     st.write(feature_list)
