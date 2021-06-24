@@ -50,7 +50,7 @@ def get_key(val):
             return value
         
 def get_feature_value(val):
-    feature_dict = {"Yes":1, "No":2}
+    feature_dict = {"Yes":1, "No":0}
     for key, value in feature_dict.items():
         if val == key:
             return value
